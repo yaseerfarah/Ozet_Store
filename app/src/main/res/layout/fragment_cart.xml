@@ -1,0 +1,87 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="yaseerfarah22.com.ozet_design.View.Cart"
+    android:layout_marginTop="?attr/actionBarSize"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/confirm"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/card_recycleview"
+            ></android.support.v7.widget.RecyclerView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/confirm"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total : "
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:id="@+id/total"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="155 .EGP"
+                    android:textStyle="bold"
+                    android:typeface="serif"
+                    android:layout_toRightOf="@+id/total"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:id="@+id/total_price"
+                    />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/total"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/card_confirm"
+                    android:background="@drawable/border_b2"
+                    android:text="Confirm "
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp"
+
+                    />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

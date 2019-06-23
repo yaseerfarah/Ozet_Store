@@ -1,0 +1,56 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="yaseerfarah22.com.ozet_design.View.Done">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thank you , Yasser !"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:id="@+id/sin"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your order has been placed"
+            android:textSize="13sp"
+            android:layout_below="@+id/sin"
+            android:layout_marginTop="10dp"
+            android:id="@+id/some"
+            android:layout_centerHorizontal="true"
+            />
+
+
+        <ImageButton
+            android:layout_width="190dp"
+            android:layout_height="160dp"
+            android:background="@drawable/ic_truck"
+            android:id="@+id/truck"
+            android:layout_below="@+id/some"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>

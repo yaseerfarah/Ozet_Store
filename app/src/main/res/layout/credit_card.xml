@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_margin="20dp"
+    >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+          <ImageButton
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/card_bg"
+              android:background="@mipmap/ic_card_bg"
+              />
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/ic_chip"
+                android:id="@+id/chip"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="40dp"
+                />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/ic_visa"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="15dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chip"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:text="XXXX    XXXX    XXXX    XXXX"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="@font/kreditfront"
+                android:id="@+id/credit_num"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/credit_num"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:text="VALID UPTO "
+                android:textColor="@color/white"
+                android:fontFamily="@font/kreditfront"
+                android:textSize="12sp"
+                android:id="@+id/credit_date"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/credit_num"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:text="06"
+                android:layout_toRightOf="@+id/credit_date"
+                android:textColor="@color/white"
+                android:fontFamily="@font/kreditfront"
+                android:textSize="12sp"
+                android:id="@+id/credit_datemm"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/credit_num"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="5dp"
+                android:text="/"
+                android:layout_toRightOf="@+id/credit_datemm"
+                android:textColor="@color/white"
+                android:fontFamily="@font/kreditfront"
+                android:textSize="12sp"
+                android:id="@+id/credit_datesin"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/credit_num"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="5dp"
+                android:text="21"
+                android:layout_toRightOf="@+id/credit_datesin"
+                android:textColor="@color/white"
+                android:fontFamily="@font/kreditfront"
+                android:textSize="12sp"
+                android:id="@+id/credit_dateyy"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/credit_date"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:text="YASEER FARAH"
+                android:textColor="@color/white"
+                android:fontFamily="@font/kreditfront"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:id="@+id/credit_name"
+                />
+
+        </RelativeLayout>
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

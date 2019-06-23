@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:context="yaseerfarah22.com.ozet_design.View.Product_desc"
+
+    android:elevation="10dp"
+    android:background="@color/white"
+    >
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+
+
+
+        <ImageView
+            android:id="@+id/v_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/black"
+
+
+
+
+            />
+
+
+
+       <ImageButton
+           android:layout_width="25dp"
+           android:layout_height="25dp"
+           android:background="@drawable/ic_shopping_cart_black_24dp"
+           android:layout_alignParentRight="true"
+           android:layout_marginTop="15dp"
+           android:layout_marginRight="13dp"
+           android:id="@+id/desc_cart"
+
+           />
+
+       <ImageButton
+           android:layout_width="25dp"
+           android:layout_height="25dp"
+           android:background="@drawable/ic_menu_white_24dp"
+           android:layout_alignParentLeft="true"
+           android:layout_marginTop="15dp"
+           android:layout_marginLeft="15dp"
+           android:id="@+id/desc_nav"
+
+           />
+
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_below="@+id/v_view_pager"
+           android:layout_marginTop="2dp"
+           android:id="@+id/vline1"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp"
+           android:background="@android:color/darker_gray"/>
+
+       <android.support.v7.widget.CardView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/info_card"
+           android:layout_below="@+id/vline1"
+           android:layout_marginTop="5dp"
+           android:layout_marginRight="10dp"
+           android:layout_marginLeft="10dp"
+           >
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/vtitle"
+                   android:text="London Sweetshirt"
+                   android:textSize="19sp"
+                   android:textColor="@android:color/black"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginLeft="15dp"
+                   />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/vprice"
+                   android:text="155.EGP"
+                   android:textSize="19sp"
+                   android:textColor="@android:color/black"
+                   android:layout_below="@+id/vtitle"
+                   android:layout_marginLeft="15dp"
+                   android:layout_marginTop="8dp"
+                   android:textStyle="bold"
+                   />
+
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/vexprice"
+                   android:text="155.EGP"
+                   android:textSize="19sp"
+                   android:textColor="@android:color/darker_gray"
+                   android:layout_below="@+id/vtitle"
+                   android:layout_toRightOf="@+id/vprice"
+                   android:layout_marginLeft="50dp"
+                   android:layout_marginTop="8dp"
+                   android:textStyle="normal"
+                   />
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="0.5dp"
+
+                   android:id="@+id/vlineprice"
+                   android:layout_below="@+id/vtitle"
+                   android:layout_toRightOf="@+id/vprice"
+                   android:layout_marginLeft="50dp"
+                   android:layout_marginTop="21dp"
+
+                   android:layout_alignEnd="@+id/vexprice"
+                   android:background="@android:color/black"/>
+
+
+               <ImageButton
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:background="@drawable/ic_favorite_border_black2_24dp"
+                   android:layout_alignParentEnd="true"
+                   android:layout_marginRight="20dp"
+                   android:layout_marginTop="10dp"
+                   />
+
+
+           </RelativeLayout>
+
+
+       </android.support.v7.widget.CardView>
+
+
+
+
+       <android.support.v7.widget.CardView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/opti_card"
+           android:layout_below="@+id/info_card"
+           android:layout_marginTop="5dp"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp"
+           >
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+               <android.support.v7.widget.RecyclerView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+
+                   android:layout_marginLeft="30dp"
+                   android:layout_centerHorizontal="true"
+                   android:id="@+id/vrecycleview"
+                   android:layout_marginTop="15dp"
+                   ></android.support.v7.widget.RecyclerView>
+
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/vrecycleview"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginTop="10dp"
+                   android:orientation="horizontal"
+                   android:layout_marginBottom="5dp"
+                   >
+                   <Button
+                       android:layout_width="50dp"
+                       android:layout_height="50dp"
+                       android:text="+"
+                       android:textColor="@color/white"
+                       android:textSize="25sp"
+                       android:background="@color/black"
+
+                       />
+
+
+                   <TextView
+                       android:layout_width="50dp"
+                       android:layout_height="50dp"
+
+                       android:text="1"
+                       android:textSize="22sp"
+                       android:gravity="center"
+                       android:textColor="@color/black"
+                       android:background="@drawable/border_b2"
+
+                       />
+
+                   <Button
+                       android:layout_width="50dp"
+                       android:layout_height="50dp"
+                       android:text="-"
+                       android:textColor="@color/black"
+                       android:textSize="25sp"
+                       android:background="@drawable/border_b2"
+
+                       />
+
+               </LinearLayout>
+
+
+           </RelativeLayout>
+
+
+       </android.support.v7.widget.CardView>
+
+
+
+       <Button
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true"
+           android:background="@drawable/border_b2"
+           android:text="Add to Cart"
+           android:textColor="@android:color/black"
+           android:textSize="17sp"
+           android:layout_marginLeft="15dp"
+           android:layout_centerHorizontal="true"
+           android:layout_marginBottom="10dp"
+
+           />
+
+
+
+
+
+
+   </RelativeLayout>
+
+
+
+
+</FrameLayout>

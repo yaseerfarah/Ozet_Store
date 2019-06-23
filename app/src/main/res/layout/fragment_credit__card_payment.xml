@@ -1,0 +1,190 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="yaseerfarah22.com.ozet_design.View.Credit_Card_payment">
+
+    <!-- TODO: Update blank fragment layout -->
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_margin="10dp"
+       >
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_alignParentRight="true"
+           android:layout_marginTop="20dp"
+           android:id="@+id/card_number_info"
+           >
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="right"
+               android:text="Card Number"
+               android:textSize="15sp" />
+
+           <EditText
+               android:layout_width="match_parent"
+               android:layout_height="30dp"
+               android:hint="Card Number"
+               android:paddingRight="10dp"
+               android:imeOptions="actionNext"
+               android:gravity="right"
+               android:inputType="number"
+               android:maxLength="16"
+               android:layout_marginTop="10dp"
+               android:background="@drawable/border_e"
+               android:id="@+id/card_number_edit"
+               />
+       </LinearLayout>
+
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_alignParentRight="true"
+           android:layout_below="@+id/card_number_info"
+           android:layout_marginTop="20dp"
+           android:id="@+id/card_name_info"
+           >
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="right"
+               android:text="Name ON Card"
+               android:textSize="15sp" />
+
+           <EditText
+               android:layout_width="match_parent"
+               android:layout_height="30dp"
+               android:hint="Name On Card"
+               android:paddingRight="10dp"
+               android:imeOptions="actionNext"
+               android:maxLines="1"
+               android:gravity="right"
+               android:layout_marginTop="10dp"
+               android:background="@drawable/border_e"
+               android:id="@+id/card_name_edit"
+               />
+       </LinearLayout>
+
+
+       <LinearLayout
+           android:layout_width="130dp"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_marginLeft="20dp"
+           android:layout_below="@+id/card_name_info"
+           android:layout_marginTop="20dp"
+           android:id="@+id/card_cvv_info"
+
+           >
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="CVV Code"
+               android:gravity="center"
+               android:textSize="15sp" />
+
+           <EditText
+               android:layout_width="match_parent"
+               android:layout_height="30dp"
+               android:hint="***"
+               android:inputType="numberPassword"
+               android:maxLength="3"
+               android:imeOptions="actionGo"
+               android:gravity="center"
+               android:layout_marginTop="10dp"
+               android:background="@drawable/border_e"
+               android:id="@+id/card_cvv_edit"
+               />
+       </LinearLayout>
+
+
+
+       <LinearLayout
+           android:layout_width="130dp"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_marginRight="15dp"
+           android:layout_below="@+id/card_name_info"
+           android:layout_alignParentRight="true"
+           android:layout_marginTop="20dp"
+           android:id="@+id/card_expiration_info"
+           >
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:text="Expiration Date"
+               android:textSize="15sp" />
+
+           <RelativeLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="right"
+               >
+
+               <EditText
+                   android:layout_width="50dp"
+                   android:layout_height="30dp"
+                   android:hint="MM"
+                   android:imeOptions="actionNext"
+                   android:inputType="number"
+                   android:maxLength="2"
+                   android:gravity="center"
+                   android:layout_marginTop="10dp"
+                   android:background="@drawable/border_e"
+                   android:id="@+id/card_expirationmm_edit"
+                   />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="/"
+                   android:textSize="29sp"
+                   android:paddingTop="2dp"
+                   android:layout_toRightOf="@+id/card_expirationmm_edit"
+                   android:layout_marginLeft="4dp"
+                   />
+
+               <EditText
+                   android:layout_width="50dp"
+                   android:layout_height="30dp"
+                   android:hint="YY"
+                   android:imeOptions="actionNext"
+                   android:inputType="date"
+                   android:maxLength="2"
+                   android:gravity="center"
+                   android:layout_marginTop="10dp"
+                   android:background="@drawable/border_e"
+                   android:layout_toRightOf="@+id/card_expirationmm_edit"
+                   android:layout_marginLeft="20dp"
+                   android:id="@+id/card_expirationyy_edit"
+                   />
+
+           </RelativeLayout>
+
+
+       </LinearLayout>
+
+
+   </RelativeLayout>
+
+
+
+
+
+
+
+</FrameLayout>

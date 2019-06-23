@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/shopping_filter"
+    android:title="filter"
+    android:icon="@drawable/ic_filter_list_black_24dp"
+    app:showAsAction="ifRoom"
+
+        >
+
+        <menu>
+            <group android:id="@+id/group"
+                android:checkableBehavior="single">
+            <item android:id="@+id/price_higher_low"
+                android:title="Price Higher to Low"
+
+                />
+            <item android:id="@+id/price_low_higher"
+                android:title="Price Low to Higher"
+                />
+            <item android:id="@+id/time_higher_low"
+                android:title="Time Higher to Low"
+                />
+
+            <item android:id="@+id/time_low_higher"
+                android:title="Time Low to Higher"
+                />
+            </group>
+
+        </menu>
+
+    </item>
+<item android:id="@+id/shopping_bag"
+    android:title="bag"
+    app:actionLayout="@layout/cart_count"
+    app:showAsAction="ifRoom"
+
+    />
+
+
+</menu>

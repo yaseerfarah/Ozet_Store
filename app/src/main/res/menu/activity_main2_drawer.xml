@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_avatar"
+            android:title="Account" />
+
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_heart"
+            android:title="Favorite" />
+
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_truck"
+            android:title="Order" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_shopping_cart"
+            android:title="Shopping Cart" />
+
+
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_video"
+            android:title="Dashboard" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_share1"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_paper_plane"
+                android:title="Send" />
+
+            <item
+                android:id="@+id/nav_location"
+                android:icon="@drawable/ic_placeholder"
+                android:title="Location" />
+
+
+
+        </menu>
+    </item>
+
+
+    <item android:title="">
+
+        <menu>
+
+            <item
+                android:id="@+id/logout"
+                android:title="LogOut"
+                android:icon="@drawable/ic_logout"/>
+
+        </menu>
+
+
+    </item>
+
+</menu>

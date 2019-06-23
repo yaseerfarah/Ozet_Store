@@ -1,0 +1,201 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="yaseerfarah22.com.ozet_design.View.Shipping">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="CUSTOMER INFORMATION"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:id="@+id/customer_info"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/name_info"
+            android:layout_below="@+id/customer_info"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Name"
+                android:textSize="15sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:hint="Name"
+                android:paddingRight="10dp"
+                android:gravity="right"
+                android:imeOptions="actionNext"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_e"
+                android:id="@+id/name_edit"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/name_info"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/email_info"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="E-mail"
+                android:textSize="15sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:hint="E-mail"
+                android:imeOptions="actionNext"
+                android:paddingRight="10dp"
+                android:gravity="right"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_e"
+                android:id="@+id/email_edit"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/email_info"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/Phone_info"
+            >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Phone"
+            android:textSize="15sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:hint="Pnone"
+            android:paddingRight="10dp"
+            android:gravity="right"
+            android:imeOptions="actionNext"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_e"
+            android:id="@+id/phone_edit"
+            />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="SHIPPING ADDRESS"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:id="@+id/shipping_info"
+            android:layout_marginTop="35dp"
+            android:layout_below="@+id/Phone_info"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/shipping_info"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/city_info"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="City"
+                android:textSize="15sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:hint="City"
+                android:imeOptions="actionNext"
+                android:paddingRight="10dp"
+                android:gravity="right"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_e"
+                android:id="@+id/city_edit"
+                />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/city_info"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/address_info"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Address"
+                android:textSize="15sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:hint="Address"
+                android:imeOptions="actionGo"
+                android:paddingRight="10dp"
+                android:gravity="right"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_e"
+                android:id="@+id/address_edit"
+                />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

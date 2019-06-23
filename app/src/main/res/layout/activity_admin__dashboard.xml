@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="yaseerfarah22.com.ozet_design.View.Admin_Dashboard">
+
+
+   <View
+       android:layout_width="match_parent"
+       android:layout_height="250dp"
+
+       android:background="@color/black"
+       />
+
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_keyboard_backspace_black_24dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="15dp"
+            android:scaleType="fitXY"
+            />
+
+
+
+
+
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+
+
+
+    >
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           >
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="130dp"
+               android:layout_marginTop="20dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginRight="10dp"
+
+               >
+              <android.support.v7.widget.CardView
+                  android:layout_width="120dp"
+                  android:layout_height="match_parent"
+                  android:layout_marginBottom="5dp"
+                  android:layout_marginLeft="10dp"
+                  android:id="@+id/dash_add"
+
+
+                  >
+
+
+                  <RelativeLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent">
+
+                      <ImageButton
+                          android:layout_width="40dp"
+                          android:layout_height="40dp"
+                          android:id="@+id/dash_iadd"
+                          android:background="@drawable/ic_add"
+                          android:layout_centerHorizontal="true"
+                          android:layout_marginTop="20dp"
+                          />
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_centerInParent="true"
+                          android:layout_below="@+id/dash_iadd"
+                          android:layout_marginTop="20dp"
+                          android:text="Add"
+                          android:textColor="@color/black"
+                          android:textSize="13sp"
+                          />
+                  </RelativeLayout>
+              </android.support.v7.widget.CardView>
+
+               <android.support.v7.widget.CardView
+                   android:layout_width="120dp"
+                   android:layout_height="match_parent"
+                   android:layout_marginBottom="5dp"
+                   android:layout_alignParentRight="true"
+                   android:layout_marginRight="10dp"
+
+                   >
+
+
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent">
+
+                       <ImageButton
+                           android:layout_width="40dp"
+                           android:layout_height="40dp"
+                           android:id="@+id/dash_idelet"
+                           android:background="@drawable/ic_delete"
+                           android:layout_centerHorizontal="true"
+                           android:layout_marginTop="20dp"
+                           />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_centerInParent="true"
+                           android:layout_below="@+id/dash_idelet"
+                           android:layout_marginTop="20dp"
+                           android:text="Delete"
+                           android:textColor="@color/black"
+                           android:textSize="13sp"
+                           />
+                   </RelativeLayout>
+               </android.support.v7.widget.CardView>
+
+
+           </RelativeLayout>
+
+
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="130dp"
+               android:layout_marginTop="20dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginRight="10dp"
+
+               >
+               <android.support.v7.widget.CardView
+                   android:layout_width="120dp"
+                   android:layout_height="match_parent"
+                   android:layout_marginBottom="5dp"
+                   android:layout_marginLeft="10dp"
+
+
+                   >
+
+
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent">
+
+                       <ImageButton
+                           android:layout_width="40dp"
+                           android:layout_height="40dp"
+                           android:id="@+id/dash_iedit"
+                           android:background="@drawable/ic_edit"
+                           android:layout_centerHorizontal="true"
+                           android:layout_marginTop="20dp"
+                           />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_centerInParent="true"
+                           android:layout_below="@+id/dash_iedit"
+                           android:layout_marginTop="20dp"
+                           android:text="Edit"
+                           android:textColor="@color/black"
+                           android:textSize="13sp"
+                           />
+                   </RelativeLayout>
+               </android.support.v7.widget.CardView>
+
+               <android.support.v7.widget.CardView
+                   android:layout_width="120dp"
+                   android:layout_height="match_parent"
+                   android:layout_marginBottom="5dp"
+                   android:layout_alignParentRight="true"
+                   android:layout_marginRight="10dp"
+
+                   >
+
+
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent">
+
+                       <ImageButton
+                           android:layout_width="40dp"
+                           android:layout_height="40dp"
+                           android:id="@+id/dash_islide"
+                           android:background="@drawable/ic_slider"
+                           android:layout_centerHorizontal="true"
+                           android:layout_marginTop="20dp"
+                           />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_centerInParent="true"
+                           android:layout_below="@+id/dash_islide"
+                           android:layout_marginTop="20dp"
+                           android:text="Slider Image"
+                           android:textColor="@color/black"
+                           android:textSize="13sp"
+                           />
+                   </RelativeLayout>
+               </android.support.v7.widget.CardView>
+
+
+           </RelativeLayout>
+
+
+       </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

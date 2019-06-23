@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="yaseerfarah22.com.ozet_design.View.Personal_page">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+
+        >
+
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:cardCornerRadius="0dp"
+            android:id="@+id/blackview"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradiance"
+                />
+
+        </android.support.v7.widget.CardView>
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_keyboard_backspace_black_24dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="15dp"
+            android:elevation="3dp"
+            android:scaleType="fitXY"
+            />
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/person_card"
+            app:cardCornerRadius="40dp"
+            android:elevation="12dp"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+
+
+            >
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@mipmap/man"
+                android:scaleType="centerCrop"
+
+                />
+
+        </android.support.v7.widget.CardView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yaseer Farah"
+            android:layout_below="@+id/person_card"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:textSize="19sp"
+            android:elevation="3dp"
+            android:textColor="@android:color/white"
+            />
+
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:id="@+id/card_navigation"
+            app:cardCornerRadius="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="220dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="12dp"
+            android:background="@android:drawable/dialog_holo_light_frame"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                >
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/like"
+                    android:layout_toLeftOf="@+id/ship"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="60dp"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageButton
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/ic_like" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Favorite"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ship"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageButton
+                        android:layout_width="40dp"
+                        android:layout_height="38dp"
+
+                        android:scaleType="fitXY"
+                        android:background="@drawable/ic_truck" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        />
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/card"
+                    android:layout_toRightOf="@+id/ship"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="60dp"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageButton
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+
+                        android:background="@drawable/ic_shopping_cart"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Card"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        />
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_navigation"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First Name"
+                android:id="@+id/first"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yaseer"
+                android:id="@+id/Anfirst"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="30dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Name"
+                android:id="@+id/last"
+                android:layout_below="@+id/first"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                android:layout_marginLeft="15sp"
+                android:layout_marginTop="20dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Farah"
+                android:id="@+id/Anlast"
+                android:layout_below="@+id/first"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City"
+                android:id="@+id/city"
+                android:layout_below="@+id/last"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cairo"
+                android:id="@+id/Ancity"
+                android:layout_below="@+id/last"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:id="@+id/address"
+                android:layout_below="@+id/city"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AL ashreen - Faisal"
+                android:id="@+id/anaddress"
+                android:layout_below="@+id/city"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone Number"
+                android:id="@+id/phone"
+                android:layout_below="@+id/address"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01126372201"
+                android:id="@+id/anphone"
+                android:layout_below="@+id/address"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                />
+
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

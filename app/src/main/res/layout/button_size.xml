@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="57dp"
+    android:layout_height="50dp">
+
+
+    <Button
+        android:layout_width="55dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/border_b2"
+        android:text="XL"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        android:id="@+id/sizebutton"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "953764976977",
+    "firebase_url": "https://ozet-design.firebaseio.com",
+    "project_id": "ozet-design",
+    "storage_bucket": "ozet-design.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953764976977:android:af26e36c44f989a3",
+        "android_client_info": {
+          "package_name": "yaseerfarah22.com.ozet_design"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "953764976977-5ppb6s3rp3ddjl3j7hh4gq35dpiutaun.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "yaseerfarah22.com.ozet_design",
+            "certificate_hash": "4ce72b1271f7bde542269b27fd7922b203b76197"
+          }
+        },
+        {
+          "client_id": "953764976977-692dn5ghthng3r6g3qjbu6r8sqlp97kv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2FwHtAqFq8nxoyntQEHM9-Twd7GRs8UM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "953764976977-692dn5ghthng3r6g3qjbu6r8sqlp97kv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

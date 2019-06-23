@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="105dp">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cart_cardview"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:src="@mipmap/logo"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitXY"
+                android:id="@+id/card_image"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="London Sweetshirt"
+                android:id="@+id/card_title"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_toRightOf="@+id/card_image"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="13dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Size :"
+                android:id="@+id/card_size"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                android:layout_below="@+id/card_title"
+                android:layout_toRightOf="@+id/card_image"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XL"
+                android:id="@+id/card_ansize"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_below="@+id/card_title"
+                android:layout_toRightOf="@+id/card_size"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantity :"
+                android:id="@+id/card_quantity"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                android:layout_below="@+id/card_size"
+                android:layout_toRightOf="@+id/card_image"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+
+                />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:id="@+id/card_anquantity"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_below="@+id/card_size"
+                android:layout_toRightOf="@+id/card_quantity"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+
+                />
+
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50.00"
+                android:id="@+id/card_price"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_below="@+id/card_size"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="3dp"
+                android:layout_toLeftOf="@+id/card_egp"
+                android:typeface="serif"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=".EGP"
+                android:id="@+id/card_egp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_below="@+id/card_size"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="3dp"
+                android:typeface="serif"
+
+
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_close_black_24dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/card_close"
+                />
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

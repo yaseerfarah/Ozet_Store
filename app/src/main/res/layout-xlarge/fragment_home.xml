@@ -1,0 +1,269 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="yaseerfarah22.com.ozet_design.View.home">
+
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="true"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            >
+
+            <RelativeLayout
+                android:id="@+id/ima_rel"
+                android:layout_width="match_parent"
+                android:layout_height="430dp"
+
+
+
+                android:layout_alignParentTop="true"
+
+
+
+                >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                    android:paddingBottom="3.3dp"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp"
+                    android:paddingTop="0dp"
+
+
+                    />
+
+                <LinearLayout
+                    android:id="@+id/linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"/>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/top"
+                android:layout_below="@+id/ima_rel"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/cat_logo1"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="4dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/ic_new_releases_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/cat_title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+
+                        android:text="Yaseer"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+                     <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="40dp"
+                         android:layout_marginTop="2.3dp"
+                      android:gravity="end"
+    >
+
+                         <Button
+                             android:layout_width="85dp"
+                             android:layout_height="25dp"
+
+                             android:layout_alignParentEnd="true"
+                             android:layout_alignParentTop="true"
+                             android:background="@drawable/border_b"
+                             android:text="see More"
+                             android:textSize="12dp" />
+                     </RelativeLayout>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/cat_recycle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginTop="5dp"></android.support.v7.widget.RecyclerView>
+
+
+            </LinearLayout>
+
+            ////////////////////////////////////////////////////
+
+            <LinearLayout
+                android:id="@+id/mid"
+                android:layout_below="@+id/top"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/cat_logo2"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="4dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/ic_new_releases_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/cat_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+
+
+                        android:text="Yaseer"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2.3dp"
+                        android:gravity="end"
+                        >
+
+                        <Button
+                            android:layout_width="85dp"
+                            android:layout_height="25dp"
+
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/border_b"
+                            android:text="see More"
+                            android:textSize="12dp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/cat_recycle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginTop="5dp"></android.support.v7.widget.RecyclerView>
+
+
+            </LinearLayout>
+            /////////////////////////////////////////////////////////
+
+            <LinearLayout
+                android:id="@+id/low"
+                android:layout_below="@+id/mid"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/cat_logo3"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="4dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/ic_new_releases_black2_24dp" />
+
+                    <TextView
+                        android:id="@+id/cat_title3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+
+                        android:text="Yasser"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2.3dp"
+                        android:gravity="end"
+                        >
+
+                        <Button
+                            android:layout_width="85dp"
+                            android:layout_height="25dp"
+
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/border_b"
+                            android:text="see More"
+                            android:textSize="12dp"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/cat_recycle3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginTop="5dp"></android.support.v7.widget.RecyclerView>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
