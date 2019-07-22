@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -119,7 +120,22 @@ public class Card_pro_adapter extends RecyclerView.Adapter<Card_pro_adapter.Pro_
 
         holder.pro_image.setTransitionName(products.get(position).getImages_url().get(0));
 
-        holder.name.setText(products.get(position).getName());
+        if(layout_view==1){
+            if(products.get(position).getName().toCharArray().length>5){
+
+                String title="";
+
+                for(int i=0;i<10;i++){
+                    title+=products.get(position).getName().toString().charAt(i);
+                }
+                holder.name.setText(title+"...");
+            }
+        }
+        else {
+
+            holder.name.setText(products.get(position).getName());
+        }
+
         holder.price.setText(products.get(position).getPrice());
 
         holder.fav_button.setOnClickListener(new View.OnClickListener() {
@@ -168,11 +184,11 @@ public class Card_pro_adapter extends RecyclerView.Adapter<Card_pro_adapter.Pro_
         ImageView pro_image;
         TextView name,price;
         ImageButton fav_button;
-        CardView cardView;
+        RelativeLayout cardView;
 
         public Pro_holder(View itemView) {
             super(itemView);
-            cardView=(CardView)itemView.findViewById(R.id.card_view);
+            cardView=(RelativeLayout) itemView.findViewById(R.id.card_view);
             pro_image=(ImageView)itemView.findViewById(R.id.pro_image);
             name=(TextView)itemView.findViewById(R.id.pro_name);
             price=(TextView)itemView.findViewById(R.id.pro_price);

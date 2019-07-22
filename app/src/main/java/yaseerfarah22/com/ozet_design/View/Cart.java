@@ -80,6 +80,7 @@ public class Cart extends Fragment {
         userCollectionViewModel.getCartLiveData().observe(this, new Observer< List<Cart_info>>() {
             @Override
             public void onChanged(@Nullable  List<Cart_info> cart_infos) {
+                cart_infoLists[0].clear();
                 cart_infoLists[0].addAll(cart_infos);
                 cardcartadapter.notifyDataSetChanged();
 

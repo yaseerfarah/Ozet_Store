@@ -7,6 +7,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.ScaleAnimation;
 import android.widget.Button;
 
 import java.util.List;
@@ -24,8 +26,9 @@ public class Card_size_adapter extends RecyclerView.Adapter<Card_size_adapter.Pr
     private Context context;
     private List<String>sizes;
     private String size;
+    private Button lastCheck;
 
-    int button_index=-1;
+    int button_index=0;
 
 
 
@@ -34,6 +37,7 @@ public class Card_size_adapter extends RecyclerView.Adapter<Card_size_adapter.Pr
         this.context = context;
         this.sizes=sizes;
         this.size=sizes.get(0);
+
 
     }
 
@@ -54,30 +58,70 @@ public class Card_size_adapter extends RecyclerView.Adapter<Card_size_adapter.Pr
 
         holder.button.setText(String.valueOf(sizes.get(position)));
 
+        if(button_index==position){
+            lastCheck=holder.button;
+            scaleUpView(lastCheck);
+            lastCheck.setBackground(ContextCompat.getDrawable(context,R.drawable.light_black));
+            lastCheck.setTextColor(ContextCompat.getColor(context, R.color.white));
+
+        }
+
         holder.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                size=holder.button.getText().toString();
-                button_index=position;
-                notifyDataSetChanged();
+                if(button_index!=position) {
+                    size = holder.button.getText().toString();
+                    button_index = position;
+                    scaleUpView(holder.button);
+                    holder.button.setBackground(ContextCompat.getDrawable(context, R.drawable.light_black));
+                    holder.button.setTextColor(ContextCompat.getColor(context, R.color.white));
+
+
+                    scaleDownView(lastCheck);
+                    lastCheck.setBackground(ContextCompat.getDrawable(context, R.drawable.border_b2));
+                    lastCheck.setTextColor(ContextCompat.getColor(context, R.color.black));
+
+                    lastCheck = holder.button;
+                    //notifyDataSetChanged();
+
+                }
+
             }
 
         });
-        if(button_index==position){
-            holder.button.setBackground(ContextCompat.getDrawable(context,R.color.black));
-            holder.button.setTextColor(ContextCompat.getColor(context, R.color.white));
 
-        }
-        else {
-            holder.button.setBackground(ContextCompat.getDrawable(context,R.drawable.border_b2));
-            holder.button.setTextColor(ContextCompat.getColor(context, R.color.black));
-
-        }
 
 
 
 
     }
+
+
+
+    ///////////////////////////////////////// Scale Animation///////////////////////////////////////////////////////
+
+    public void scaleUpView(View v) {
+        Animation anim = new ScaleAnimation(
+                1f, 1.1f, // Start and end values for the X axis scaling
+                1f, 1.1f, // Start and end values for the Y axis scaling
+                Animation.RELATIVE_TO_SELF, 0.5f, // Pivot point of X scaling
+                Animation.RELATIVE_TO_SELF, 0.5f); // Pivot point of Y scaling
+        anim.setFillAfter(true); // Needed to keep the result of the animation
+        anim.setDuration(300);
+        v.startAnimation(anim);
+    }
+
+    public void scaleDownView(View v) {
+        Animation anim = new ScaleAnimation(
+                1.1f, 1f, // Start and end values for the X axis scaling
+                1.1f, 1f, // Start and end values for the Y axis scaling
+                Animation.RELATIVE_TO_SELF, 0.5f, // Pivot point of X scaling
+                Animation.RELATIVE_TO_SELF, 0.5f); // Pivot point of Y scaling
+        anim.setFillAfter(true); // Needed to keep the result of the animation
+        anim.setDuration(300);
+        v.startAnimation(anim);
+    }
+
 
 
     public String getSize(){

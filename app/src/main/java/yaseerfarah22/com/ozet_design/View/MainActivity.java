@@ -180,7 +180,6 @@ public class MainActivity extends AppCompatActivity implements Product_desc.OnFr
 
          userCollectionViewModel= ViewModelProviders.of(this,viewModelFactory).get(UserCollectionViewModel.class);
 
-        userCollectionViewModel.getCartLiveData().observe(this,cartObserver);
 
         ozetViewModel= ViewModelProviders.of(this,viewModelFactory).get(OzetViewModel.class);
         firebaseFirestore=FirebaseFirestore.getInstance();
@@ -453,6 +452,7 @@ public class MainActivity extends AppCompatActivity implements Product_desc.OnFr
         });*/
 
 
+        userCollectionViewModel.getCartLiveData().observe(this,cartObserver);
 
 
 
@@ -511,6 +511,9 @@ public class MainActivity extends AppCompatActivity implements Product_desc.OnFr
         return false;
     }
 
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onFragmentInteraction(Product_info product, View imageView) {
@@ -556,6 +559,7 @@ public class MainActivity extends AppCompatActivity implements Product_desc.OnFr
         fragmentTransaction.commit();
     }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
     private void set_fire(List products,fire fire_){
@@ -612,7 +616,7 @@ public class MainActivity extends AppCompatActivity implements Product_desc.OnFr
 
     }
 
-
+//////////////////////////////////////////////////////////////////////////
 
     public void start_zctivity(String category){
 

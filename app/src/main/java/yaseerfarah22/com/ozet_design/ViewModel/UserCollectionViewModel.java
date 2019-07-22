@@ -139,7 +139,7 @@ public class UserCollectionViewModel extends ViewModel  {
 
     private void cartAddSource(){
 
-        cartLiveData.addSource(new ListenFirestoreItem("Cart"), new Observer<List<DocumentSnapListener>>() {
+        cartLiveData.addSource(new ListenFirestoreItem("Cart",context), new Observer<List<DocumentSnapListener>>() {
             @Override
             public void onChanged(@Nullable List<DocumentSnapListener> documentSnapListeners) {
                 if (documentSnapListeners.size()>0) {
@@ -183,7 +183,7 @@ public class UserCollectionViewModel extends ViewModel  {
 
     private void likeAddSource(){
 
-        likeLiveData.addSource(new ListenFirestoreItem("Likes"), new Observer<List<DocumentSnapListener>>() {
+        likeLiveData.addSource(new ListenFirestoreItem("Likes",context), new Observer<List<DocumentSnapListener>>() {
             @Override
             public void onChanged(@Nullable List<DocumentSnapListener> documentSnapListeners) {
                 if (documentSnapListeners.size()>0) {

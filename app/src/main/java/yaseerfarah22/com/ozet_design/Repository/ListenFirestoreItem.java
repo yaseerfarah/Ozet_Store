@@ -1,7 +1,10 @@
 package yaseerfarah22.com.ozet_design.Repository;
 
 import android.arch.lifecycle.LiveData;
+import android.content.Context;
+import android.os.Handler;
 import android.os.ParcelUuid;
+import android.widget.Toast;
 
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentChange;
@@ -35,22 +38,46 @@ public class ListenFirestoreItem extends LiveData<List<DocumentSnapListener>> {
     public static final int modifiedTag=2;
     public static final int removedTag=3;
 
-    public ListenFirestoreItem(String collectionRef) {
+    private boolean is_ListenerRemove = true;
+    private final Handler handler = new Handler();
+    private final Runnable removeListener = new Runnable() {
+        @Override
+        public void run() {
+            listenerRegistration.remove();
+            is_ListenerRemove = true;
+        }
+    };
+
+    Context context;
+    public ListenFirestoreItem(String collectionRef, Context context) {
         this.firebaseFirestore=FirebaseFirestore.getInstance();
         this.collectionReference=firebaseFirestore.collection(collectionRef);
+        this.context=context;
     }
 
     @Override
     protected void onActive() {
 
+        if(is_ListenerRemove){
+            listenerRegistration=this.collectionReference.addSnapshotListener(myEvent);
+        }
+        else {
+            handler.removeCallbacks(removeListener);
+        }
 
-        listenerRegistration=this.collectionReference.addSnapshotListener(myEvent);
+        is_ListenerRemove=false;
+
+       // Toast.makeText(context,"active",Toast.LENGTH_SHORT).show();
+
     }
 
     @Override
     protected void onInactive() {
 
-        listenerRegistration.remove();
+        //Toast.makeText(context,"no",Toast.LENGTH_SHORT).show();
+       // listenerRegistration.remove();
+
+        handler.postDelayed(removeListener,5000);
 
 
     }

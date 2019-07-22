@@ -11,6 +11,8 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.ScaleAnimation;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -31,10 +33,11 @@ public class Payment extends Fragment {
     String name,number,mm,yy,cvv;
     String orderMethod="Cash",paypal_Emailtext;
     ViewPager viewPager;
-    CardView cash,paypal,credit;
+    CardView cash,paypal,credit,lastChecked;
     FrameLayout frameLayout;
-    ImageButton cash_ic,paypal_ic,credit_ic;
-    TextView  cash_t,paypal_t,credit_t;
+    ImageButton cash_ic,paypal_ic,credit_ic,lastChecked_ic;
+    TextView  cash_t,paypal_t,credit_t,lastChecked_t;
+
 
 
     public Payment() {
@@ -69,21 +72,35 @@ public class Payment extends Fragment {
         viewPager.setAdapter(creditCardAdapter);
 
 
-        cash.setBackgroundResource(R.color.black);
+        scaleUpView(cash);
+        cash.setBackgroundResource(R.drawable.light_black);
         cash_t.setTextColor(getResources().getColor(R.color.white));
         cash_ic.setBackgroundTintList(getResources().getColorStateList(R.color.white));
         frameLayout.setVisibility(View.INVISIBLE);
+        lastChecked=cash;
+        lastChecked_ic=cash_ic;
+        lastChecked_t=cash_t;
 
         cash.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(lastChecked!=cash){
                 orderMethod="Cash";
-                allWhite(paypal,paypal_ic,paypal_t);
-                allWhite(credit,credit_ic,credit_t);
-                cash.setBackgroundResource(R.color.black);
+                scaleDownView(lastChecked);
+                allWhite(lastChecked,lastChecked_ic,lastChecked_t);
+
+                scaleUpView(cash);
+                cash.setBackgroundResource(R.drawable.light_black);
                 cash_t.setTextColor(getResources().getColor(R.color.white));
                 cash_ic.setBackgroundTintList(getResources().getColorStateList(R.color.white));
+
                 frameLayout.setVisibility(View.INVISIBLE);
+
+
+                lastChecked=cash;
+                lastChecked_ic=cash_ic;
+                lastChecked_t=cash_t;
+                }
             }
         });
 
@@ -93,14 +110,23 @@ public class Payment extends Fragment {
             @Override
             public void onClick(View view) {
 
+                if(lastChecked!=credit){
                 orderMethod="Credit";
-                allWhite(cash,cash_ic,cash_t);
-                allWhite(paypal,paypal_ic,paypal_t);
-                credit.setBackgroundResource(R.color.black);
+                scaleDownView(lastChecked);
+                allWhite(lastChecked,lastChecked_ic,lastChecked_t);
+
+                scaleUpView(credit);
+                credit.setBackgroundResource(R.drawable.light_black);
                 credit_ic.setBackgroundTintList(getResources().getColorStateList(R.color.white));
                 credit_t.setTextColor(getResources().getColor(R.color.white));
                 Credit_Card_payment creditCardPayment=new Credit_Card_payment();
                 place_fragment(creditCardPayment,"Credit");
+
+
+                lastChecked=credit;
+                lastChecked_ic=credit_ic;
+                lastChecked_t=credit_t;
+                }
 
             }
         });
@@ -111,14 +137,24 @@ public class Payment extends Fragment {
             @Override
             public void onClick(View view) {
 
+                if(lastChecked!=paypal){
                 orderMethod="Paypal";
-                allWhite(cash,cash_ic,cash_t);
-                allWhite(credit,credit_ic,credit_t);
-                paypal.setBackgroundResource(R.color.black);
+                scaleDownView(lastChecked);
+                allWhite(lastChecked,lastChecked_ic,lastChecked_t);
+
+                scaleUpView(paypal);
+                paypal.setBackgroundResource(R.drawable.light_black);
                 paypal_t.setTextColor(getResources().getColor(R.color.white));
                 paypal_ic.setBackgroundTintList(getResources().getColorStateList(R.color.white));
                 PayPal_payment payPalPayment=new PayPal_payment();
                 place_fragment(payPalPayment,"Paypal");
+
+                lastChecked=paypal;
+                lastChecked_ic=paypal_ic;
+                lastChecked_t=paypal_t;
+                }
+
+
             }
         });
 
@@ -239,6 +275,32 @@ public class Payment extends Fragment {
         return field;
     }
 
+
+
+
+    ///////////////////////////////////////// Scale Animation///////////////////////////////////////////////////////
+
+    public void scaleUpView(View v) {
+        Animation anim = new ScaleAnimation(
+                1f, 1.05f, // Start and end values for the X axis scaling
+                1f, 1.05f, // Start and end values for the Y axis scaling
+                Animation.RELATIVE_TO_SELF, 0.5f, // Pivot point of X scaling
+                Animation.RELATIVE_TO_SELF, 0.5f); // Pivot point of Y scaling
+        anim.setFillAfter(true); // Needed to keep the result of the animation
+        anim.setDuration(300);
+        v.startAnimation(anim);
+    }
+
+    public void scaleDownView(View v) {
+        Animation anim = new ScaleAnimation(
+                1.05f, 1f, // Start and end values for the X axis scaling
+                1.05f, 1f, // Start and end values for the Y axis scaling
+                Animation.RELATIVE_TO_SELF, 0.5f, // Pivot point of X scaling
+                Animation.RELATIVE_TO_SELF, 0.5f); // Pivot point of Y scaling
+        anim.setFillAfter(true); // Needed to keep the result of the animation
+        anim.setDuration(300);
+        v.startAnimation(anim);
+    }
 
 
 
